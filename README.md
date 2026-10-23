@@ -1,4 +1,5 @@
-# Context Harness (v1)
+# MemEvals
+
 
 Tests whether a change to shared agent memory (policy text) helps the target agent and breaks any other agent.
 
