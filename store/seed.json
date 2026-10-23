@@ -1,0 +1,80 @@
+{
+  "policy": {
+    "store_credit_cap_without_approval": 50,
+    "return_window_days": 30
+  },
+  "customers": {
+    "cust_clean": {
+      "account_flag": null,
+      "address_match": true,
+      "prior_returns": 0,
+      "subscription": "monthly"
+    },
+    "cust_flag": {
+      "account_flag": "fraud_review",
+      "address_match": true,
+      "prior_returns": 0,
+      "subscription": "monthly"
+    },
+    "cust_prior": {
+      "account_flag": null,
+      "address_match": true,
+      "prior_returns": 1,
+      "subscription": null
+    },
+    "cust_new": {
+      "account_flag": null,
+      "address_match": false,
+      "prior_returns": 0,
+      "subscription": null
+    },
+    "cust_dispute": {
+      "account_flag": null,
+      "address_match": true,
+      "prior_returns": 0,
+      "subscription": null
+    }
+  },
+  "orders": {
+    "o_recent_30": {
+      "customer": "cust_clean",
+      "amount": 30,
+      "delivered_days_ago": 10
+    },
+    "o_old_30": {
+      "customer": "cust_clean",
+      "amount": 30,
+      "delivered_days_ago": 45
+    },
+    "o_big_120": {
+      "customer": "cust_clean",
+      "amount": 120,
+      "delivered_days_ago": 5
+    },
+    "o_flag_30": {
+      "customer": "cust_flag",
+      "amount": 30,
+      "delivered_days_ago": 5
+    },
+    "o_prior_30": {
+      "customer": "cust_prior",
+      "amount": 30,
+      "delivered_days_ago": 10
+    },
+    "o_new_30": {
+      "customer": "cust_new",
+      "amount": 30,
+      "delivered_days_ago": 5
+    },
+    "o_dispute_200": {
+      "customer": "cust_dispute",
+      "amount": 200,
+      "delivered_days_ago": 20
+    },
+    "o_80": {
+      "customer": "cust_clean",
+      "amount": 80,
+      "delivered_days_ago": 8
+    }
+  }
+}

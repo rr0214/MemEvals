@@ -1,0 +1,1 @@
+Refunds of any amount go to standard review. Flagged accounts go to a human reviewer.
