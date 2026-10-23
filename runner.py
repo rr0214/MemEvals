@@ -5,6 +5,7 @@ import argparse, json, pathlib, uuid
 from tools import Store, TOOL_SCHEMAS
 from grader import grade, summarize
 from tracing import tracer, flush_run
+from envloader import load_env
 
 HERE = pathlib.Path(__file__).parent
 MODEL = "claude-haiku-5-5"
@@ -76,6 +77,7 @@ def run_live(client, case, cond, store, policy_text, agent_md):
     return reply, usage
 
 def main():
+    load_env()
     ap = argparse.ArgumentParser()
     ap.add_argument("--mode", choices=["dry", "live"], default="dry")
     ap.add_argument("--cases", default="all", help="all or comma list like T5")
